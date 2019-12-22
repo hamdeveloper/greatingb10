@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="yasmintestFlow" doc:id="e6de13e4-bfb5-46b3-8420-d633358beb98" >
+		<http:listener doc:name="Listener" doc:id="9bbd604e-ee36-4ac5-90d3-b670c5210abc" config-ref="HTTP_Listener_config" path="/test"/>
+		<logger level="INFO" doc:name="Logger" doc:id="02e0c6cb-b3d0-4201-bc0f-3bf1e7f85870" message="#[payload]"/>
+	</flow>
+</mule>
